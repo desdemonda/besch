@@ -1,0 +1,54 @@
+\documentclass[12pt,DIV=15,a4paper,draft=false]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{dsfont}
+\usepackage{ulem}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{uniinput}
+
+% Formatiert die Kopfzeilen und Fusszeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
+\fancyhead[R]{\begin{minipage}{\textwidth}\begin{flushright}
+\leftmark \\ \today
+\end{flushright}
+\end{minipage}}
+\fancyhead[L]{\begin{minipage}{\textwidth}Prof. Ratzinger\\ \rightmark
+\end{minipage}}
+%\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
+%\fancyhead[R]{\begin{minipage}{\textwidth}
+%\leftmark \\ \today
+%\end{minipage}}
+%\fancyhead[L]{\begin{minipage}{\textwidth}Prof. Ratzinger\\ \rightmark \end{minipage}}
+
+\newcommand{\ket}[1]{\left\vert #1 \right\rangle}
+\newcommand{\bra}[1]{\left\langle #1 \right\vert}
+\newcommand{\braket}[2]{\langle #1 \vert #2 \rangle}
+\newcommand{\Braket}[3]{\langle #1 \vert #2 \vert #3 \rangle}
+\newcommand{\ketbra}[2]{\vert #1 \rangle \langle #2 \vert}
+\newcommand{\kommut}[2]{[\hat{#1}, \hat{#2}]}
+\newcommand{\antikommut}[2]{\{\hat{#1}, \hat{#2}\}}
+
+\DeclareMathOperator{\grad}{grad}
+
+
+% Titelseite
+\author{Jonathan Pieper}
+\title{Einführung in die Beschleunigerphysik}
+\subtitle{Mitschrift zur Vorlesung von Prof. Ratzinger}
+
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+
+\begin{document}
+\begin{titlepage}
+\maketitle
+\tableofcontents
+\end{titlepage}
+
+\end{document}
