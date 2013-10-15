@@ -1,4 +1,4 @@
-\documentclass[12pt,DIV=15,a4paper,draft=false]{scrartcl}
+\documentclass[12pt,DIV=15,a4paper,twoside,draft=false]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{makeidx}
@@ -10,17 +10,24 @@
 \usepackage{wrapfig}
 \usepackage{pdfpages}
 \usepackage{uniinput}
+\usepackage{float}
+
+% Floats
+\floatstyle{ruled}
+\newfloat{bemer}{H}{lomark}
+\floatname{bemer}{Bemerkung}
 
 % Formatiert die Kopfzeilen und Fusszeilen
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
-\fancyhead[R]{\begin{minipage}{\textwidth}\begin{flushright}
+\fancyhead[ER,OL]{\begin{minipage}{\textwidth}\begin{flushright}
 \leftmark \\ \today
 \end{flushright}
 \end{minipage}}
-\fancyhead[L]{\begin{minipage}{\textwidth}Prof. Ratzinger\\ \rightmark
+\fancyhead[EL,OR]{\begin{minipage}{\textwidth}Prof. Ratzinger\\ \rightmark
 \end{minipage}}
+\fancyfoot[EL,OR]{}
 %\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
 %\fancyhead[R]{\begin{minipage}{\textwidth}
 %\leftmark \\ \today
@@ -35,8 +42,6 @@
 \newcommand{\kommut}[2]{[\hat{#1}, \hat{#2}]}
 \newcommand{\antikommut}[2]{\{\hat{#1}, \hat{#2}\}}
 
-\DeclareMathOperator{\grad}{grad}
-
 
 % Titelseite
 \author{Jonathan Pieper}
@@ -50,5 +55,49 @@
 \maketitle
 \tableofcontents
 \end{titlepage}
+
+\section{Vorbesprechung}
+\paragraph{Übung:} 8:45 -- 9:30 Uhr
+\paragraph{Vorlesung:} 9:45 -- 11:15 Uhr
+
+
+\section[Einführung]{Einführung - Wozu dienen Teilchenstrahlen?}
+\subsection{Teilchenstrahlen in der Grundlagenforschung}
+Aktuelle Fragen:
+\begin{itemize}
+	\item Wie werden Quarks und Gluonen frei (deconfinement)?
+	\item Wie entsteht die Hadronenmasse sowie der Hadronenspin aus den Konstituenten?
+	\item Warum haben wir einen Überschuss an Materie gegenüber Antimaterie (das was wir heute sehen)?
+\end{itemize}
+
+
+\subsection{Teilchenstrahlung in der Angewandten Forschung}
+Synchrotronstrahlungsquellen, 
+Free Electron Laser(FEL)
+
+\paragraph{Energieversorgung}
+\begin{itemize}
+\item  \textbf{Transmutation} von radioaktivem Abfall aus Spaltungsreaktionen (MYRRHA, Belgien)
+
+\item Teststrahlen für die deuterium Fusionsforschung (\textbf{IFMIF}, 250\;{}mA Deuteronen auf Lithium erzeugen eine intensive 13\;{}MeV Neutronenstrahlung)
+
+\item \textbf{Trägheitsfusion} mittels Schwerionentreiberstrahl (zur Zeit nicht realistisch aufgrund kurzer Strahllebensdauern)
+\end{itemize}
+$$ \mathrm{d + t \rightarrow {}^4 He + r_i + 17\;{}MeV} $$
+
+\subparagraph{Medizin}
+Produktion radioaktiver Isotope als \textbf{Tracer} ($\mathrm{Tc^{99}}$ als $γ$ - Emitter nach Andocken an ein interessierendes Molekül)
+
+Positronen-Emissions-Tomographie \textbf{PET} mit kurzlebigen Isotopen wie $\mathrm{F^{18}}$, \textbf{innere Radionuklidtherapie}
+
+\textbf{Krebstherapie} mittels Elektronen-, Protonen- und leichten Ionenstrahlen\\
+Vorteil des Bragg-Peaks bei Protonen und leichten Ionenstrahlen (bis hinauf zum Kohlenstoff)
+
+\paragraph{Industrie}
+\textbf{Röntgenstrahlung} (2-dim Projektion, Litographie (Chip - Miniaturisierung))
+
+\textbf{Lebensmittelbehandlung} (Sterilisierung)
+
+\textbf{Ionenmanipulation} (Dotierung von Halbleitern)
 
 \end{document}
