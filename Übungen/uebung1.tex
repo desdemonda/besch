@@ -1,0 +1,71 @@
+\documentclass[12pt,DIV=15,a4paper,twoside,draft=false]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{dsfont}
+\usepackage{ulem}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{uniinput}
+\usepackage{float}
+\usepackage{titlesec}
+
+% Floats
+\floatstyle{ruled}
+\newfloat{bemer}{H}{lomark}
+\floatname{bemer}{Bemerkung}
+
+% Formatiert die Kopfzeilen und Fusszeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
+\fancyhead[ER,OL]{\begin{minipage}{\textwidth}\begin{flushright}
+\leftmark \\ \today
+\end{flushright}
+\end{minipage}}
+\fancyhead[EL,OR]{\begin{minipage}{\textwidth}Abgabe von Jonathan Pieper \\ Übung zur Einführung in die Beschleunigerphysik
+\end{minipage}}
+\fancyfoot[EL,OR]{}
+%\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
+%\fancyhead[R]{\begin{minipage}{\textwidth}
+%\leftmark \\ \today
+%\end{minipage}}
+%\fancyhead[L]{\begin{minipage}{\textwidth}Prof. Ratzinger\\ \rightmark \end{minipage}}
+
+\newcommand{\antikommut}[2]{\{\hat{#1}, \hat{#2}\}}
+
+
+% Titelseite
+\author{Jonathan Pieper}
+\title{Abgabe Übung 1}
+\subtitle{Übung zur Einführung in die Beschleunigerphysik}
+
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+
+\begin{document}
+\maketitle
+\titlelabel{Aufgabe 1.\thesection{} }
+
+\section{Coulomb Barriere}
+Solved by Wolframalpha:
+\begin{eqnarray*}
+P(θ∈[29.5^\circ , 30.5^{\circ}]) &=& ∫_{\frac{29.5^\circ \cdot 2 \cdot \pi}{360}}^{\frac{30.5^{\circ} \cdot 2 \cdot \pi}{360}}
+\frac{q^4 d n}{(4 \pi ε_0 m v_0^2)^2 \sin^4(θ/2)} dθ = (1.23263\cdot 10^-7 n q^4)/(e_0^2 m^2 v_0^4)
+\end{eqnarray*}
+
+\section{Teilchenenergien im Synchrotron}
+
+\section{Auflösung von Teilchenstrahlen}
+Für die Untersuchung des Gitters mit $γ$ Quanten muss die Wellenlänge $λ < d = 5.75\;{}$\AA{} kleiner als die Gitterkonstante sein.
+Die Energie der Photonen muss demnach
+\begin{eqnarray*}
+λ & = & \frac{h\cdot c}{E} < 5.75\cdot 10^{-10} m \\
+\Rightarrow E  & > & \frac{1.986446\cdot 10^{-25}\;\mathrm{J m}}{5.75\cdot 10^{-15} m} = 1.142\cdot 10^{-9}\;\mathrm{J} = 7.128\;\mathrm{GeV}
+\end{eqnarray*}
+Demnach wird zum erzeugen der Photonen mittels Elektronen über Bremsstrahlung eine Mindestenergie von
+$$ E_{el} = e\cdot U = 7.128\cdot 10^9\;\mathrm{eV}$$
+und demzufolge eine Spannung von $U = 7.128\cdot 10^9\;\mathrm{V}$ benötigt.
+\end{document}
