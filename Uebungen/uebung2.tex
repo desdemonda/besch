@@ -3,7 +3,7 @@
 \usepackage[ngerman]{babel}
 \usepackage{makeidx}
 \usepackage{graphicx}
-\usepackage{dsfont}
+%\usepackage{dsfont}
 \usepackage{ulem}
 \usepackage{amsthm}
 \usepackage{amsmath}
@@ -50,8 +50,45 @@
 \titlelabel{Aufgabe \blatt{}.\thesection{} }
 
 \section{Relativistische Kinematik}
-
+\begin{align*}
+p &= \sqrt{2mT} &
+E &= T + mc^2
+\end{align*}
+\paragraph{Fixed Target}
+\begin{align*}
+p_1 &= \sqrt{2 m_e 27.5\;\mathrm{GeV}} = 
+8.959\cdot 10^{-20}\;\mathrm{Ns} = 168\;\mathrm{MeV/c} & 
+p_2 &= 0\\
+E_1 &= (27.5\;\mathrm{GeV} + m_e c^2) & 
+E_2 &= (0 + m_p c^2)
+\end{align*}
+\begin{align*}
+s^2 = m_{\mathrm{inv}}^2 &=
+ (E_1 + E_2)^2 - (p_1c + p_2c)^2\\
+  &=  ((27.5\;\mathrm{GeV} + m_e c^2) + (0+ m_p c^2))^2 - 2 m_e \cdot 27.5\;\mathrm{GeV} \cdot c^2\\
+&= 8.087\cdot 10^{20}\;\mathrm{eV}^2 \\
+⇒ s &= 28.44\;\mathrm{GeV}
+\end{align*}
+\paragraph{Collider}
+\begin{align*}
+p_1 &= \sqrt{2 m_e 27.5\;\mathrm{GeV}} = 168\;\mathrm{MeV/c}& 
+p_2 &= \sqrt{2 m_p 920\;\mathrm{GeV}} = 2.22\cdot 10^{-17}\;\mathrm{Ns} = 42\;\mathrm{GeV/c}\\
+E_1 &= (27.5\;\mathrm{GeV} + m_e c^2) & 
+E_2 &= (920\;\mathrm{GeV} + m_p c^2)
+\end{align*}
+\begin{align*}
+s^2 = m_{\mathrm{inv}}^2 &=
+ ((27.5\;\mathrm{GeV} + m_e c^2) + (920\;\mathrm{GeV} + m_p c^2))^2 - 
+(168\;\mathrm{MeV}\cdot c + 42\;\mathrm{GeV}\cdot c)^2\\
+&= 8.978\cdot 10^{23}\;\mathrm{eV}^2\\
+⇒ s &= 947.5 \;\mathrm{GeV}
+\end{align*}
 
 \section{Tandemgenerator}
-
+$$ E = (e+q) U $$
+\begin{description}
+\item[$\mathrm{Ar^{3+}}$] $ E = 4 e U = $
+\item[$\mathrm{Ar^{4+}}$] $ E = 5 e U = $
+\item[$\mathrm{Ar^{5+}}$] $ E = 6 e U = $
+\end{description}
 \end{document}
