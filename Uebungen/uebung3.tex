@@ -1,0 +1,76 @@
+\documentclass[12pt,DIV=15,a4paper,twoside,draft=false]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{makeidx}
+\usepackage{graphicx}
+%\usepackage{dsfont}
+\usepackage{ulem}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{uniinput}
+\usepackage{float}
+\usepackage{titlesec}
+
+% Floats
+\floatstyle{ruled}
+\newfloat{bemer}{H}{lomark}
+\floatname{bemer}{Bemerkung}
+
+% Formatiert die Kopfzeilen und Fusszeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
+\fancyhead[ER,OL]{\begin{minipage}{\textwidth}\begin{flushright}
+\leftmark \\ \today
+\end{flushright}
+\end{minipage}}
+\fancyhead[EL,OR]{\begin{minipage}{\textwidth}Abgabe von Jonathan Pieper \\ Übung zur Einführung in die Beschleunigerphysik
+\end{minipage}}
+\fancyfoot[EL,OR]{}
+%\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
+%\fancyhead[R]{\begin{minipage}{\textwidth}
+%\leftmark \\ \today
+%\end{minipage}}
+%\fancyhead[L]{\begin{minipage}{\textwidth}Prof. Ratzinger\\ \rightmark \end{minipage}}
+
+\newcommand{\antikommut}[2]{\{\hat{#1}, \hat{#2}\}}
+\newcommand{\blatt}{3}
+
+% Titelseite
+\author{Jonathan Pieper\and Dominik Kaufhold\and Kai Harry Schmidt\and Tobin Knautz}
+\title{Abgabe Übung \blatt{}}
+\subtitle{Übung zur Einführung in die Beschleunigerphysik}
+
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+
+\begin{document}
+\maketitle
+\titlelabel{Aufgabe \blatt{}.\thesection{} }
+
+\section{Zyklotron}
+\paragraph{Frequenz}
+$$ ν_{Zyk} = \frac{1}{2π} \frac{q}{m} B = 22.11\;\mathrm{MHz} $$
+Die Hochfrequenz $ν_{HF}$ liegt im Optimalfall etwas niedriger als die Zyklotronfrequenz $ν_{Zyk}$.
+
+\paragraph{Maximalradius}
+$$ r_{\mathrm{max}} = \frac{p}{qB} =  \frac{\sqrt{2m_p E_{kin}}}{qB} = 0.254\;\mathrm{m} $$
+
+\paragraph{Geschwindigkeit}
+$$ β_p = \sqrt{\frac{2E_{kin}}{m_p c^2}} = \frac{35\,288\,072\;\mathrm{\frac{m}{s}}}{c} = 0.1177 {\;}\hat{=}{\;} 11.77\;\% $$
+
+\paragraph{Problematik}
+Die relativistisch korrekte Zyklotronfrequenz ist:
+$$ ω_{Zyk} = \frac{qB}{γm} = \mathrm{const.} $$
+In einer nichtrelativistischen Näherung kann $γ=1$ angenommen werden, woraus ein konstantes Magnetfeld folgt.
+
+Bei relativistischen Geschwindigkeiten muss sich demnach das Magnetfeld ändern, damit die Zyklotronfrequenz konstant bleibt.
+
+\section{Wideroe Beschleuniger}
+$$ \frac{E_{kin}}{U} = \frac{6\;\mathrm{MeV}}{0.1\;\mathrm{MeV}} = 60\;\mathrm{Beschleunigungsstrecken} $$
+
+$$ l_n = \frac{1}{2} β λ = \frac{1}{2} \sqrt{\frac{2E_{kin}}{mc^2}} \frac{c}{f} = 3.55\;\mathrm{cm} $$
+
+
+\end{document}
