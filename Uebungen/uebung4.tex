@@ -1,0 +1,76 @@
+\documentclass[12pt,DIV=15,a4paper,twoside,draft=false]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{makeidx}
+\usepackage{graphicx}
+%\usepackage{dsfont}
+\usepackage{ulem}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{uniinput}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{dsfont}
+
+% Floats
+\floatstyle{ruled}
+\newfloat{bemer}{H}{lomark}
+\floatname{bemer}{Bemerkung}
+
+% Formatiert die Kopfzeilen und Fusszeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
+\fancyhead[ER,OL]{\begin{minipage}{\textwidth}\begin{flushright}
+\leftmark \\ \today
+\end{flushright}
+\end{minipage}}
+\fancyhead[EL,OR]{\begin{minipage}{\textwidth}Abgabe von Jonathan Pieper \\ Übung zur Einführung in die Beschleunigerphysik
+\end{minipage}}
+\fancyfoot[EL,OR]{}
+%\setlength{\headheight}{25.2pt} % Damit alles in den Header passt.
+%\fancyhead[R]{\begin{minipage}{\textwidth}
+%\leftmark \\ \today
+%\end{minipage}}
+%\fancyhead[L]{\begin{minipage}{\textwidth}Prof. Ratzinger\\ \rightmark \end{minipage}}
+
+\newcommand{\Mv}[1]{\vec{#1}}
+\newcommand{\blatt}{4}
+
+% Titelseite
+\author{Jonathan Pieper\and Dominik Kaufhold\and Kai Harry Schmidt}
+\title{Abgabe Übung \blatt{}}
+\subtitle{Übung zur Einführung in die Beschleunigerphysik}
+
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+
+\begin{document}
+\maketitle
+\titlelabel{Aufgabe \blatt{}.\thesection{} }
+
+\section{Betatron}
+Das Prinzip des Betatrons basiert auf dem Faraday‘schen Induktionsgesetz:
+\begin{align*}
+U_{ind} &= \oint \Mv{E} d\Mv{s} = - \frac{d}{dt} ∫ \Mv{B} d\Mv{A} \\
+ Φ &= ∫ \Mv{B} d\Mv{A} = πr^2 \bar{B}_z \\
+ |\Mv{E}| &=  \frac{|U_{ind}|}{2πr} = \frac{πr^2}{2πr} \dot{\bar{B}}_z = \frac{1}{2} \dot{\bar{B}}_z r\\
+ \dot{p} &=  q |\Mv{E}| = \frac{1}{2} q  \dot{\bar{B}}_z r = q \dot{B}_Z r\\
+ ⇒ \dot{B}_Z &= \frac{1}{2} \dot{\bar{B}}_z
+\end{align*}
+
+$$ p_{max} = q B_Z^{max} r = q \cdot 1T \cdot 0.5\;\mathrm{m} = \frac{1}{2} e $$
+%Der Strahlungsverlust durch Synchrotronstrahlung ist proportional zu $γ^4/r$.
+%Daraus resultiert eine obere Grenze der Elektronenenergie bei ca.
+%\begin{align*}
+%E_{el} ≤ 300 - 500\;\mathrm{MeV} && ⇒ && {γ} ≤ 580 - 980
+%\end{align*}
+
+
+\section{Mikrotron}
+$$ t= \frac{2πr}{v} = \frac{2πγm}{qB} = \frac{2πE}{qBc^2} $$
+
+Im homogenen Magnetfeld ist die Umlaufzeit proportional zur Gesamtenergie. 
+$$ ω = \frac{n c^2 B}{ΔE} $$
+\end{document}
